@@ -1,0 +1,225 @@
+:root {
+    --from: #e942ff;
+    --to: #8838ff;
+    --text1: #d89eff;
+    --text2: #9241c8;
+    --text3: #6e5d7e;
+    --text4: #c6cacd;
+    --text5: #3e2753;
+    --text6: #a39daa;
+    --bg1: #ffffff;
+    --bg2: #f5f3f7;
+    --bg3: #3e2753;
+    --bg4: #e570ff;
+}
+body {
+    margin: 0;
+    background-color: var(--bg2);
+    overflow: hidden;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    z-index: 2;
+    position: relative;
+    column-gap: 15%;
+}
+body::before {
+    content: " ";
+    top: 0;
+    left: -100px;
+    border-radius: 0 0 400px 400px;
+    width: 35%;
+    height: 90%;
+    position: absolute;
+    background: linear-gradient(0deg, #8838ff 10%, #e942ff 100%);
+}
+body::after {
+    content: " ";
+    bottom: 0;
+    right: -100px;
+    border-radius: 400px 400px 0 0;
+    width: 35%;
+    height: 80%;
+    z-index: 0;
+    position: absolute;
+    background: #f1edf4;
+}
+h1{
+    font-size: xx-large;
+    color: var(--text5);
+}
+.mobile-phone {
+    flex-basis: 70%;
+    display: flex;
+    position: relative;
+    max-width: 265px;
+    padding: 10px;
+    border-radius: 25px;
+    background-color: white;
+    box-shadow: 0px 1px 9px 3px #00000024, 0px 1px 12px 13px #0000000a;
+}
+.container {
+    background-color: var(--bg2);
+    border-radius: 25px;
+    overflow: hidden;
+}
+.notch {
+    width: 180px;
+    height: 35px;
+    border-radius: 20px;
+    background: white;
+    position: absolute;
+    left: 80px;
+    top: 5px;
+}
+.app-header {
+    background: linear-gradient(90deg, #8838ff 10%, #e942ff 100%);
+    display: flex;
+    max-height: 70px;
+    align-items: center;
+    border-radius: 8px;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 5px;
+    position: relative;
+}
+svg {
+    width: 20px;
+    fill: #fff;
+}
+.info {
+    position: absolute;
+    right: 0;
+}
+svg[alt="arrow"] {
+    width: 10px;
+    fill: #fff;
+}
+img[alt="sam"] {
+    border-radius: 50%;
+    border: 2px solid white;
+    width: 8%;
+    height: 10%;
+}
+.sam {
+    display: flex;
+    flex-direction: column;
+}
+.samuel {
+    margin: 0;
+    color: white;
+}
+.sam span {
+    font-size: 10px;
+    color: var(--text4);
+}
+.chat {
+    padding: 10px;
+    gap: 7px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.chat p{
+    font-size: x-small;
+}
+.left {
+    align-self: flex-start;
+    color: var(--bg4);
+    margin: 0;
+    font-size: 12px;
+    max-width: 58%;
+    padding: 5px;
+    background-color: var(--bg1);
+    border-radius: 7px;
+}
+.images {
+    display: flex;
+    width: 65%;
+    justify-content: space-between;
+}
+.images img {
+    width: 30%;
+    border-radius: 10px;
+}
+.right {
+    color: black;
+    margin: 0;
+    font-size: 12px;
+    width: 55%;
+    padding: 5px;
+    background-color: var(--bg1);
+    border-radius: 7px;
+}
+.price {
+    display: flex;
+    width: 60%;
+    position: relative;
+    align-self: flex-start;
+    align-items: center;
+    padding: 10px;
+    gap: 5px;
+    background: linear-gradient(270deg, #8838ff 10%, #e942ff 100%);
+    border-radius: 10px 10px 10px 5px;
+}
+.price p {
+    margin: 0;
+    font-size: x-small;
+    color: white;
+}
+.price span {
+    position: absolute;
+    right: 15px;
+    color: white;
+}
+.message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: var(--bg1);
+    width: 90%;
+    align-self: center;
+    border-radius: 20px;
+}
+.message>p {
+    font-size: xx-small;
+    color: var(--text6);
+    margin: 0;
+}
+.svg {
+    background-color: var(--bg3);
+    border-radius: 50%;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+}
+.svg svg {
+    width: 50%;
+    margin: auto;
+    height: 50%;
+}
+.details {
+    flex-basis: 45%;
+    width: 300px;
+}
+.details>p{
+    width: 380px;
+    font-size: small;
+    margin: 0;
+}
+
+@media(width <=768px){
+main{
+    flex-direction: column;
+}
+.mobile-phone{
+    flex-basis: 80%;
+}
+}
